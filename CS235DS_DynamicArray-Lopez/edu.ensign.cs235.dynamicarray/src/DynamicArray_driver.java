@@ -29,5 +29,10 @@ public class DynamicArray_driver {
         System.out.println(testArray[3]);
         System.out.println(testArray[4]);
 
+        int number1 = 10;
+        int number2 = 10;
+
+        System.out.println(number1 == number2);
+
     }
 }

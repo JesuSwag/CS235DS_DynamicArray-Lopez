@@ -1,7 +1,6 @@
-import lombok.Data;
 import java.util.Random;
 
-@Data //Uses external library "lombok"
+
 public class DynamicArray {
     private int[] dynamicArray;
     private int count = 20;
@@ -22,7 +21,7 @@ public class DynamicArray {
     //-- Constructor with specified array size
     public DynamicArray(final int capacity){
         dynamicArray = new int[capacity];
-        setCount(capacity);
+        count = capacity;
 
         Random numberGenerator = new Random();
         int randomNum;
@@ -81,7 +80,7 @@ public class DynamicArray {
 
     //-- Returns true or false if the array is empty
     public boolean is_empty(){
-        int dynamicArraySize = getDynamicArray().length;
+        int dynamicArraySize = dynamicArray.length;
         boolean is_empty = false;
 
         if (dynamicArraySize == 0) {
